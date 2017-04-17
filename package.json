@@ -1,1 +1,40 @@
-{     "devDependencies": {         "hummus": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-hummus",     "homepage": "https://github.com/npmtest/node-npmtest-hummus",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-hummus.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "test coverage for [hummus (v1.0.75)](http://pdfhummus.com/) [![npm package](https://img.shields.io/npm/v/npmtest-hummus.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-hummus) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-hummus.svg)](https://travis-ci.org/npmtest/node-npmtest-hummus)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "hummus": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-hummus",
+    "keywords": [
+        "coverage",
+        "test",
+        "hummus"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_hummus.js",
+    "name": "npmtest-hummus",
+    "nameAlias": "npmtest_hummus",
+    "nameOriginal": "npmtest-hummus",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-hummus.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
