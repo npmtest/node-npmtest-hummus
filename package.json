@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "test coverage for [hummus (v1.0.75)](http://pdfhummus.com/) [![npm package](https://img.shields.io/npm/v/npmtest-hummus.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-hummus) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-hummus.svg)](https://travis-ci.org/npmtest/node-npmtest-hummus)",
+    "description": "#### basic test coverage for  [hummus (v1.0.75)](http://pdfhummus.com/)  [![npm package](https://img.shields.io/npm/v/npmtest-hummus.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-hummus) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-hummus.svg)](https://travis-ci.org/npmtest/node-npmtest-hummus)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "hummus": "*",
@@ -36,5 +36,5 @@
         "start": "PORT=${PORT:-8080} utility2 start test.js",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.1"
+    "version": "2017.4.23"
 }
